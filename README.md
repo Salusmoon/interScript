@@ -1,7 +1,7 @@
-## interScript
+## INTER SCRİPT
 
 
-#Excel Report
+## Excel Report
 
 script arguman ile çalışmaktadır.
 
