@@ -1,7 +1,7 @@
 import sys
 import os
 import pandas as pd
-import xlsxwriter   
+import xlsxwriter
 import platform
 import xlrd
 
@@ -23,7 +23,7 @@ first_excel_sheet_names = xlrd.open_workbook(first_excel, on_demand=True).sheet_
 second_excel_sheet_names = xlrd.open_workbook(first_excel, on_demand=True).sheet_names()
 
 
-if not ("TestiniumCLOUDResults" in first_excel_sheet_names and "TestiniumCLOUDResults" in second_excel_sheet_names):
+if ("TestiniumCLOUDResults" in first_excel_sheet_names and "TestiniumCLOUDResults" in second_excel_sheet_names):
 
     df1 = pd.read_excel(first_excel, "TestiniumCLOUDResults")
     df2 = pd.read_excel(second_excel, "TestiniumCLOUDResults")
@@ -73,7 +73,7 @@ else:
     df1_durum = []
 
     for index, row in df1.iterrows():
-        if row["Başarılı"]== 1: 
+        if row["Başarılı"]== 1:
             df1_durum.append("SUCCESS")
             df1_test.append(row["Test Senaryosu"])
         elif row["Uyarı"]==1:
@@ -88,14 +88,14 @@ else:
         else:
             df1_durum.append("BLOCKED")
             df1_test.append(row["Test Senaryosu"])
-    
+
     dict = {"Test Senaryosu": df1_test, "Durum": df1_durum}
     df1= pd.DataFrame(data=dict)
 
     df2_test=[]
     df2_durum=[]
     for index, row in df2.iterrows():
-        if row["Başarılı"]== 1: 
+        if row["Başarılı"]== 1:
             df2_durum.append("SUCCESS")
             df2_test.append(row["Test Senaryosu"])
         elif row["Uyarı"]==1:
