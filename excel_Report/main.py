@@ -73,7 +73,7 @@ else:
     df1_durum = []
 
     for index, row in df1.iterrows():
-        if row["Başarılı"]== 1:
+        if row["Başarılı"]== 1: 
             df1_durum.append("SUCCESS")
             df1_test.append(row["Test Senaryosu"])
         elif row["Uyarı"]==1:
