@@ -20,4 +20,6 @@ Excel dosyaların script ile aynı dosya dizinde olması gerekmektedir.
 DURUM argumanı büyük harflerle yazılmalıdır. Alabileceği parametreler ise SUCCESS FAILURE ve ERROR kelimeleridir.
 
 
+###### Dipnot
 
+Excel dosyalarının isminin kısa olması tavsiye edilir.
