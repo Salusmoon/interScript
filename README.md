@@ -15,10 +15,9 @@ script arguman ile çalışmaktadır.
 
 Excel dosyaların script ile aynı dosya dizinde olması gerekmektedir.
 
-"py main.py excel1.xls excel2.xls" şeklinde çalıştırılmaktadır.
+"py main.py excel1.xls excel2.xls DURUM" şeklinde çalıştırılmaktadır.
 
-Şuan için Durum bilgisi SUCCESS olan caseler report.xls doyası içersine yazılmaktadır.
-
+DURUM argumanı büyük harflerle yazılmalıdır. Alabileceği parametreler ise SUCCESS FAILURE ve ERROR kelimeleridir.
 
 
 
