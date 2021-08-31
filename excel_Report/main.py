@@ -11,7 +11,7 @@ first_excel_path = sys.argv[1]
 second_excel_path= sys.argv[2]
 durum = sys.argv[3]
 
-if os_platform == "Linux":
+if os_platform == "Linux" or os_platform == "Darwin":
     currentPath=os.getcwd()
     first_excel = pd.ExcelFile(currentPath+"/"+first_excel_path)
     second_excel = pd.ExcelFile(currentPath+"/"+second_excel_path)
