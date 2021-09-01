@@ -28,7 +28,7 @@ second_excel_sheet_names = xlrd.open_workbook(first_excel, on_demand=True).sheet
 # return dataFrame
 def excelRead(excel, sheetName, Testdurum):
     df=pd.read_excel(excel, sheetName)
-    df=df1.loc[df1["Durum"] == Testdurum]
+    df=df.loc[df["Durum"] == Testdurum]
     return df
 #  
 # data: filtrelenmiş data
@@ -81,7 +81,7 @@ def dataTestScenarioResılt(data):
 if ("TestiniumCLOUDResults" in first_excel_sheet_names and "TestiniumCLOUDResults" in second_excel_sheet_names):
 
     df1 = excelRead(first_excel, "TestiniumCLOUDResults", durum)
-    df2 = excelRead(first_excel, "TestiniumCLOUDResults", durum)
+    df2 = excelRead(second_excel, "TestiniumCLOUDResults", durum)
 
     df1_test = testCases(df1)
     df2_test = testCases(df2)
