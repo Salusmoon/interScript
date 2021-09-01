@@ -6,7 +6,7 @@ Python3'ü yükledikten sonra kütüphaneleride yüklemeniz gerekmektedir.
 
 Bunun için aşağıda gösterilen kodu kullanabilirsiniz. Böylece bütün kütüphanler kolayca yüklenmiş olur.
 
-> pip install -r requirements.txt
+> pip3 install -r requirements.txt
 
 
 # Excel Report
