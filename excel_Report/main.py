@@ -3,7 +3,6 @@ import os
 import pandas as pd
 import xlsxwriter
 import platform
-import xlrd
 
 # İşletim sistemi ve path işlemleri
 os_platform = platform.system()
@@ -20,8 +19,8 @@ elif os_platform == "Windows" :
     first_excel = pd.ExcelFile(currentPath+"\\"+first_excel_path)
     second_excel = pd.ExcelFile(currentPath+"\\"+second_excel_path)
 
-first_excel_sheet_names = xlrd.open_workbook(first_excel, on_demand=True).sheet_names()
-second_excel_sheet_names = xlrd.open_workbook(first_excel, on_demand=True).sheet_names()
+first_excel_sheet_names = pd.read_excel(first_excel,sheet_name=None)
+second_excel_sheet_names = pd.read_excel(second_excel,sheet_name=None)
 
 #  
 # excel: excel dosyası      sheetName: İstenilen excel sayfası      durum: istenilen test durumu
